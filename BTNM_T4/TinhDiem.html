@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính điểm</title>
+</head>
+<body>
+    <h1> Tính điểm DH khối D</h1>
+    <form>
+        Môn toán : <input type="number" id="Toan" > <br> <br>
+        Môn văn : <input type="number" id="Van"> <br> <br>
+        Môn anh : <input type="number" id="Anh"> <br> <br>
+        
+        <select name="KhuVuc" id="KhuVuc"> <br>
+            <option value="KV1">KV1</option>;
+            <option value="KV2">KV2</option>; 
+            <option value="KV2-NT">KV2-NT</option>;
+            <option value="KV3">KV3</option>;
+        </select>
+         <button type="button" onclick="getDiem();" >Tính </button>
+    </form>
+</body>
+<script>
+    function getDiem(){
+        let Toan = document.getElementById("Toan").value;
+        let Van = document.getElementById("Van").value;
+        let Anh = document.getElementById("Anh").value;
+        let diemkv1 = parseInt(Toan) + parseInt(Van) + parseInt(Van) + 0.75 ; 
+        let diemkv2NT = parseInt(Toan) + parseInt(Van) + parseInt(Van) + 0.5  ; 
+        let diemkv2 = parseInt(Toan) + parseInt(Van) + parseInt(Van) + 0.25 ; 
+        let diemkv3 = parseInt(Toan) + parseInt(Van) + parseInt(Van) + 0 ; 
+        let KhuVuc = document.getElementById("KhuVuc").value;
+        if (KhuVuc == "KV1" ) {
+            document.write("Tổng điểm thi khối D "+ diemkv1 + "điểm") ;
+
+        } else if ( KhuVuc == "KV2") {
+            document.write("Tổng điểm thi khối D " + diemkv2 + " điểm ");
+
+        } else if ( KhuVuc == "KV2-NT") {
+            document.write("Tổng điểm thi khối D " + diemkv2NT + "điểm");
+            
+        } else  if ( KhuVuc == "KV3"){
+            document.write("Tổng điểm thi khối D" + diemkv3  + "điểm ");
+        } else {
+        }
+
+
+    }
+</script>
+</html>

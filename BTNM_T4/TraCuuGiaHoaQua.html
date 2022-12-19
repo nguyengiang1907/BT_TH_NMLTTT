@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tra cứu hoa quả</title>
+</head>
+<body>
+    <form>
+    <input type="text" id="HoaQua">
+        
+        <button type="button " onclick="getGia();">Xem giá</button>
+    </form>
+    <script>
+        function getGia (){
+            var HoaQua = document.getElementById("HoaQua").value;
+            switch (HoaQua) {
+                case "Ổi" :
+                    document.write(" Giá 20000 VND/1kg")
+                    break;
+                case "Dưa hấu":
+                    document.write(" Gía 20000 VND/1kg")
+                    break;
+                case "Xoài":
+                    document.write(" Gía 30000 VND/1Kg")
+                    break;
+                case "Cam":
+                    document.write("Gía 40000 VND/1Kg")
+                    break;
+                case "Chôm chôm":
+                    document.write(" Gía 40000 VND/1Kg")
+                    break;
+                case "Măng cụt":
+                    document.write(" Gía 50000 VNĐ/1Kg")
+                    break;
+                default:
+                    break;
+            }
+
+        }   
+     </script>
+ 
+</body>
+</html>
